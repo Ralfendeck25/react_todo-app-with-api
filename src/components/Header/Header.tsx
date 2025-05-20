@@ -9,6 +9,7 @@ type Props = {
   handleAddTodo: (event: FormEvent) => void;
   isAddingTodo: boolean;
   isDeletingTodo: boolean;
+  handleToggleAll: () => void;
 };
 
 export const Header: React.FC<Props> = ({
@@ -19,6 +20,7 @@ export const Header: React.FC<Props> = ({
   handleAddTodo,
   isAddingTodo,
   isDeletingTodo,
+  handleToggleAll,
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -37,6 +39,7 @@ export const Header: React.FC<Props> = ({
             active: !todosActive && todosCompleted,
           })}
           data-cy="ToggleAllButton"
+          onClick={handleToggleAll}
         />
       )}
 

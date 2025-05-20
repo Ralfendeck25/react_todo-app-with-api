@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { FilterStatus } from '../../components/enums/enums';
+
 type Props = {
   todosCompleted: number;
   todosActive: number;
